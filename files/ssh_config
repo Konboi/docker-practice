@@ -1,0 +1,7 @@
+host github.com
+     user git
+     hostname github.com
+     port 22
+     Compression yes
+     StrictHostKeyChecking no
+     identityfile ~/.ssh/sample_app_rsa
