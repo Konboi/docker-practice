@@ -48,7 +48,6 @@ RUN mkdir -p /home/app/local/perl
 RUN /home/app/local/xbuild/ruby-install 2.2.0 /home/app/local/ruby/ -- -j4
 
 # clone repository & setup carton
-# RUN git clone https://github.com/kayac/nikuapp.git /home/app/nikuapp
 RUN git clone git@github.com:Konboi/docker-practice.git /home/app/sinatra-app
 WORKDIR /home/app/sinatra-app
 RUN /home/app/local/perl/bin/carton install
