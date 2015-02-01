@@ -52,13 +52,6 @@ RUN git clone git@github.com:Konboi/docker-practice.git /home/app/sinatra-app
 WORKDIR /home/app/sinatra-app
 RUN /home/app/local/perl/bin/carton install
 
-USER root
-ENV USER root
-RUN yum install -y cronie ntp
-ADD ntp.conf  /etc/ntp.conf
-RUN ntpq -p
-RUN echo "app ALL=NOPASSWD: /usr/sbin/ntpdate" >> /etc/sudoers
-
 #USER app
 #ENV USER app
 #CMD /bin/sh /home/app/nikuapp/docker_run.sh

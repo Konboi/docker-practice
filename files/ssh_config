@@ -4,4 +4,4 @@ host github.com
      port 22
      Compression yes
      StrictHostKeyChecking no
-     identityfile ~/.ssh/sample_app_rsa
+     identityfile ~/.ssh/id_rsa
