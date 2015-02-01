@@ -44,13 +44,13 @@ ENV HOME /home/app
 # install xbuild
 RUN git clone https://github.com/tagomoris/xbuild.git /home/app/local/xbuild
 
-RUN mkdir -p /home/app/local/perl
+RUN mkdir -p /home/app/local/ruby
 RUN /home/app/local/xbuild/ruby-install 2.2.0 /home/app/local/ruby/ -- -j4
 
 # clone repository & setup carton
 RUN git clone git@github.com:Konboi/docker-practice.git /home/app/sinatra-app
 WORKDIR /home/app/sinatra-app
-RUN /home/app/local/perl/bin/carton install
+RUN /home/app/local/ruby/bin/bundle install --path vendor/bundle
 
 #USER app
 #ENV USER app
