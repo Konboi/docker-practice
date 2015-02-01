@@ -8,8 +8,7 @@ RUN yum -y install yum-utils sudo ntp && yum -y clean all
 
 # set timezone
 RUN rm -f /etc/localtime
-RUN ln -fs /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
-RUN ntpdate ntp.nict.jp
+RUN cp /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
 
 # install epel
 RUN yum -y localinstall http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
