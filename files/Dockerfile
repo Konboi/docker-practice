@@ -28,8 +28,8 @@ RUN yum -y install --enablerepo=centosplus openssl-devel
 RUN useradd -u 1000 -k /etc/skel/ -m app -s /bin/bash
 ADD profile /home/app/.profile
 RUN mkdir -p /home/app/.ssh
-ADD id_rsa.pub  /home/app/.ssh/id_rsa.pub
-ADD id_rsa      /home/app/.ssh/id_rsa
+ADD id_rsa.pub  /home/app/.ssh/sample_app_rsa.pub
+ADD id_rsa      /home/app/.ssh/sample_app_rsa
 ADD ssh_config  /home/app/.ssh/config
 
 RUN chown app:app /home/app/.profile
