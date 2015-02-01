@@ -51,7 +51,4 @@ RUN /home/app/local/xbuild/ruby-install 2.2.0 /home/app/local/ruby/ -- -j4
 RUN git clone git@github.com:Konboi/docker-practice.git /home/app/sinatra-app
 WORKDIR /home/app/sinatra-app
 RUN /home/app/local/ruby/bin/bundle install --path vendor/bundle
-
-#USER app
-#ENV USER app
-#CMD /bin/sh /home/app/nikuapp/docker_run.sh
+CMD /bin/sh /home/app/sinatra-app/docker_run.sh
