@@ -1,0 +1,7 @@
+# .profile
+
+# User specific environment and startup programs
+PATH=$PATH:$HOME/bin
+PATH=/home/app/local/ruby/bin:$PATH
+
+export PATH
