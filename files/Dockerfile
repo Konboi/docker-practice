@@ -19,7 +19,7 @@ RUN yum -y localinstall http://downloads.mysql.com/archives/get/file/MySQL-share
 
 # install various packages
 RUN yum -y groupinstall "Development Tools"
-RUN yum -y install nc telnet dstat git ngrep strace expat-devel tar libxml2-devel zlib
+RUN yum -y install nc telnet dstat git ngrep strace expat-devel tar libxml2-devel zlib libffi-devel
 
 # ref) http://blog.urban-theory.net/2014/06/16/openssl-devel-install-fails-on-centos-with-docker
 RUN yum -y install --enablerepo=centosplus openssl-devel
