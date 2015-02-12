@@ -2,6 +2,7 @@ FROM centos:centos6
 MAINTAINER Konboi
 
 RUN echo 'ZONE="Asia/Tokyo"' > /etc/sysconfig/clock
+RUN echo 'UTC=False' >> /etc/sysconfig/clock
 
 # install yum-config-manager & sudo
 RUN yum -y install yum-utils sudo ntp && yum -y clean all
@@ -50,5 +51,5 @@ RUN /home/app/local/xbuild/ruby-install 2.2.0 /home/app/local/ruby/ -- -j4
 # clone repository & setup carton
 RUN git clone git@github.com:Konboi/docker-practice.git /home/app/sinatra-app
 WORKDIR /home/app/sinatra-app
-RUN /home/app/local/ruby/bin/bundle install --path vendor/bundle
+RUN /home/app/local/ruby/bin/bundle install
 CMD /bin/sh /home/app/sinatra-app/docker_run.sh
