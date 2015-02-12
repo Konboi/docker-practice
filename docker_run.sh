@@ -1,3 +1,5 @@
+#!/bin/sh
+
 set -e
 
 PATH=/home/app/local/ruby/bin:$PATH
