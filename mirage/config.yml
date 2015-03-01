@@ -29,4 +29,4 @@ host:
       endpoint: unix:///var/run/docker.sock
 
       # if you specify this, fill the form as default value on web interface.
-      default_image: wakateweb:latest
+      default_image: "wakateweb:latest"

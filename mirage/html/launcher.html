@@ -1,0 +1,28 @@
+{{ template "header" }}
+
+<h1>Launch Container</h1>
+
+<div class="col-md-6">
+<form id="launcher" method="POST" action="/launch">
+<p>
+  <label for="subdomain" class="col-md-4 text-right">subdomain </label>
+    <input type="text" name="subdomain" value="" id="subdomain"
+           class="col-md-8" placeholder="mybranch">
+</p>
+<p>
+  <label for="branch" class="col-md-4 text-right">branch </label>
+  <input type="text" name="branch" value="" id="branch"
+         class="col-md-8" placeholder="feature/mine">
+</p>
+<p>
+  <label for="image" class="col-md-4 text-right">image </label>
+  <input type="text" name="image" value="{{ .DefaultImage }}" id="image"
+         class="col-md-8" placeholder="myapp:latest">
+</p>
+<p class="text-right">
+  <input type="submit" class="btn btn-primary">
+</p>
+</form>
+</div>
+
+{{ template "footer" }}
