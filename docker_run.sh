@@ -8,4 +8,6 @@ git fetch
 git checkout $GIT_BRANCH
 git pull
 
+bundle install
+
 ruby app.rb
