@@ -10,4 +10,4 @@ git pull
 
 bundle install
 
-ruby app.rb
+rackup config.ru
