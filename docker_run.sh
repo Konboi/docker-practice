@@ -10,4 +10,4 @@ git pull
 
 bundle install
 
-rackup config.ru
+rackup -p 4567 -o 0.0.0.0 config.ru
