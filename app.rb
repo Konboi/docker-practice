@@ -4,11 +4,11 @@ require 'json'
 get '/' do
   content_type :json
 
-  message = "Hello master"
+  message = "Hello test"
   result = {
     status: 200,
     result: {
-      branch: "master",
+      branch: "test",
       message: message
     }
   }
